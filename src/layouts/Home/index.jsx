@@ -9,9 +9,10 @@ import {
   CardDescription,
   CardFooter,
   Link,
+  Title,
 } from '~/components';
 
-import { Title, List } from './styles';
+import { List } from './styles';
 
 import { usePlatforms } from '~/hooks/usePlatforms';
 
