@@ -8,5 +8,5 @@ export {
 } from './Card';
 export { Container } from './Container';
 export { Stack } from './Stack';
-export { Text } from './Text';
+export { Text, Title } from './Text';
 export { Link } from './Link';
