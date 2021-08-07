@@ -10,6 +10,7 @@ import {
   CardFooter,
   Link,
 } from '~/components';
+
 import { Title, List } from './styles';
 
 import { usePlatforms } from '~/hooks/usePlatforms';
@@ -30,8 +31,8 @@ export default function Home() {
               <CardDescription>{descricao}</CardDescription>
             </CardContent>
             <CardFooter>
-              <Link href="#" withArrow>
-                Ver detalhes
+              <Link href={`/${sku}`} withArrow>
+                Ver planos
               </Link>
             </CardFooter>
           </Card>
