@@ -7,6 +7,7 @@ export const Container = styled.a`
     font-size: 1.6rem;
     line-height: 1.6rem;
     text-decoration: none;
+    transition: all 0.35s ease;
 
     &:hover {
       filter: brightness(0.7);
