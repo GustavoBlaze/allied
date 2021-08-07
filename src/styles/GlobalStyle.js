@@ -5,6 +5,7 @@ export default createGlobalStyle`
   ${reset}
   :root {
     --primary-color: #005FF9;
+    --success-color: #10c186;
     --text-color: #2C2D2E;
     --text-color-secondary: #919399;
 
