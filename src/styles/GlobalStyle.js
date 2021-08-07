@@ -4,10 +4,13 @@ import reset from 'styled-reset';
 export default createGlobalStyle`
   ${reset}
   :root {
+    --primary-color: #005FF9;
     --text-color: #2C2D2E;
     --text-color-secondary: #919399;
-    --primary-color: #005FF9;
-    --default-border: 1px solid rgba(0, 16, 61, 0.12);
+
+    --border-radius: 12px;
+    --border-color: rgba(0, 16, 61, 0.12);
+    --default-border: 1px solid var(--border-color);
   }
 
   html,
