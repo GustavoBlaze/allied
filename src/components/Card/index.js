@@ -5,7 +5,7 @@ import { Text } from '~/components/Text';
 export const Card = styled.div`
   background: #fff;
   border: var(--default-border);
-  border-radius: var(--border-radius);
+  border-radius: var(--card-border-radius);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -14,6 +14,7 @@ export const Card = styled.div`
 
 export const CardContent = styled.div`
   padding: 2.4rem 3.2rem;
+  flex: 1;
 `;
 
 export const CardTitle = styled.h3`
@@ -38,7 +39,7 @@ export const CardFooter = styled.div`
 export const CardFooterCTA = styled(CardFooter).attrs(() => ({
   as: 'button',
 }))`
-  background: var(--success-color);
+  background: var(--primary-color);
   color: #fff;
   font-weight: 600;
   font-size: 1.8rem;
