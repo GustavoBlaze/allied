@@ -4,6 +4,10 @@ export const Text = styled.h2`
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: var(--text-color);
+
+  strong {
+    font-weight: 500;
+  }
 `;
 
 export const Title = styled.h1`
