@@ -129,6 +129,7 @@ export function CheckoutModal() {
               label="Data de nascimento"
               name="birthday"
               type="date"
+              placeholder="Digite sua data de nascimento"
               {...register('birthday', {
                 required: 'Campo obrigatório',
                 valueAsDate: true,
