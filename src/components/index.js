@@ -13,3 +13,4 @@ export { Text, Title } from './Text';
 export { Link } from './Link';
 export { List } from './List';
 export { CheckoutModal } from './CheckoutModal';
+export { default as Input } from './Input';
