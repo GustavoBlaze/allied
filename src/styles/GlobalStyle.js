@@ -9,7 +9,9 @@ export default createGlobalStyle`
     --text-color: #2C2D2E;
     --text-color-secondary: #919399;
 
-    --border-radius: 12px;
+    --card-border-radius: 12px;
+    --default-border-radius: 4px;
+
     --border-color: rgba(0, 16, 61, 0.12);
     --default-border: 1px solid var(--border-color);
   }
