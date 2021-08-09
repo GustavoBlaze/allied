@@ -10,6 +10,7 @@ import {
   CardTitle,
   CardDescription,
   CardFooterCTA,
+  Link,
 } from '~/components';
 
 import NextArrow from '~/assets/svg/arrow-next.svg';
@@ -32,21 +33,36 @@ export default function Platform() {
       <Text>{descricao}</Text>
 
       <List>
-        {plans.map(({ sku, franquia, valor }, index) => (
-          <Card as="li" key={sku}>
-            <CardContent>
-              <CardTitle>
-                {nome} - {franquia}
-              </CardTitle>
-              <CardDescription>Franquia de {franquia}</CardDescription>
-              <CardDescription>R$ {valor}</CardDescription>
-            </CardContent>
-            <CardFooterCTA onClick={() => handlePlanClick(index)}>
-              Assinar <NextArrow />
-            </CardFooterCTA>
-          </Card>
-        ))}
+        {plans
+          .filter(({ ativo }) => ativo)
+          .map(({ sku, franquia, valor, aparelho }, index) => (
+            <Card as="li" key={sku}>
+              <CardContent>
+                <CardTitle>
+                  {nome} - {franquia}
+                </CardTitle>
+                <CardDescription>Franquia de {franquia}</CardDescription>
+                <CardDescription>Valor do plano: R$ {valor}</CardDescription>
+
+                {aparelho && (
+                  <CardDescription>
+                    {aparelho.nome}: {aparelho.valor}
+                    {aparelho.valorParcela
+                      ? ` ou ${aparelho.numeroParcelas}x de ${aparelho.valorParcela}`
+                      : ''}
+                  </CardDescription>
+                )}
+              </CardContent>
+              <CardFooterCTA onClick={() => handlePlanClick(index)}>
+                Assinar <NextArrow />
+              </CardFooterCTA>
+            </Card>
+          ))}
       </List>
+
+      <Link href="/" style={{ marginTop: '2.4rem', alignSelf: 'center' }}>
+        Voltar
+      </Link>
     </Container>
   );
 }
