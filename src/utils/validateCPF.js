@@ -1,3 +1,7 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-plusplus */
 /* eslint-disable radix */
 export default function isValidCPF(number) {
   if (!number) return false;
